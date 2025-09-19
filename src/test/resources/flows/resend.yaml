@@ -1,0 +1,11 @@
+id: resend
+namespace: io.kestra.templates
+
+tasks:
+- id: date
+  type: com.scalingmatters.kestra.plugin.resend.SendMail
+  apiKey: ""
+  from: ""
+  to: ""
+  subject: "Kestra - {{flow.id}}"
+  html: "This email was sent at {{taskrun.startDate}} from Kestra - {{flow.id}}"
